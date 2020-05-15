@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/com.css" />
+</head>
+<body onscroll=scani()>
+    <img id="backimg" src="img/IMG_5378.jpg">
+    <div id="main">
+        <h1>2020年 5月 第2週...</h1>
+        <p id="tenme">html, css, javascriptの練習をしてみました。</p>
+        <p id="fonto">anime.jsというライブラリを使ってみたり、</p>
+        <p id="slide">ライブラリを使わずにアニメーションを設定したり、</p>
+        <p id="tenme2">どうやって文字をいじろうか、<br />フォントや色を設定する？<br />SVG形式にしたら輪郭をなぞるアニメーションが作れる？</p>
+        <p>実装はしてみたもののちょっと重いから軽く動かせないか？などなど...</p>
+        
+        <div id="feed1" class="fe">
+            <p>なかなかの時間をつぎ込みましたが、文字で遊ぶなら</p>
+        </div>
+        <div id="feed2" class="fe">
+            <p>別途ソフトでPNGやJPGにしてHTMLに張り付けたほうが</p>
+        </div>
+        <div id="feed3" class="fe">
+            <p>早いし簡単だという結論に至り、</p>
+        </div>
+        <div id="feed4" class="fe">
+            <p>しかしそこはデザイナーの仕事の領域なのではないかと思いつつ。</p>
+        </div>
+        <div id="feed5" class="fe">
+            <p>凝ったアニメーションはなかなか時間が必要で、</p>
+        </div>
+        <div id="feed6" class="fe">
+            <p>軽量化には基礎知識をもっとつけないといけないという</p>
+        </div>
+        <div id="feed7" class="fe">
+            <p>現実を叩きつけられました。</p>
+        </div>
+
+
+
+        <div id="fotter">
+            <small>&copy; 2020 YuMikase.</small>
+        </div>
+    </div>
+    <script type="text/javascript">
+        /*--スクロール間隔--*/
+        var h = 120;
+        /*--ブロックの数--*/
+        var num = 7;
+        /*--クラス追加--*/
+        function addcla(idname, claname) {
+            var elem = document.getElementById(idname);
+            elem.classList.add(claname);
+        }
+        /*--スクロール量の判定--*/
+        function scani() {
+            for (i = 1; i <= num; i++) {
+                if (window.scrollY > h * i + 100) {
+                    addcla("feed" + i, "feedin");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
